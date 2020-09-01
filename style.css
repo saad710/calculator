@@ -1,0 +1,42 @@
+body{
+  padding-top:100px;
+  background-image: linear-gradient(90deg,white, powderblue,white);
+}
+
+.container{
+  /* background-color:red; */
+  width: 300px;
+  
+}
+
+#inputValue{
+  width: 270px;
+  height: 80px;
+  background-color:silver;
+  color:black;
+  font-weight:bold;
+  font-size:20px;
+}
+
+.allButton{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.allButton button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color:yellow;
+  height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.allButton button:hover{
+
+  background-color: #d3c277 ;
+  color: black;
+}

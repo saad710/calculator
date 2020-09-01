@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator design using Grid</title>
+</head>
+
+<body>
+    <section class="container">
+
+        <div class="calculator">
+            <div class="inputNumber">
+                <input id="inputValue" class="form-control" type="text ">
+            </div>
+            <div class="allButton">
+
+                <button onclick="buttonHandler('one')">1</button>
+                <button onclick="buttonHandler('two')">2</button>
+
+                <button onclick="buttonHandler('three')">3</button>
+                <button onclick="buttonHandler('four')">4</button>
+                <button onclick="buttonHandler('five')">5</button>
+
+                <button onclick="buttonHandler('six')">6</button>
+                <button onclick="buttonHandler('seven')">7</button>
+                <button onclick="buttonHandler('eight')">8</button>
+
+                <button onclick="buttonHandler('nine')">9</button>
+                <button onclick="buttonHandler('zero')">0</button>
+                <button onclick="buttonHandler('multiply')">*</button>
+                <button onclick="buttonHandler('sub')">-</button>
+                <button onclick="buttonHandler('add')">+</button>
+                <button onclick="buttonHandler('backspace')"><</button>
+                  
+                <button onclick="buttonHandler('equal')"> =</button>
+                <button onclick="buttonHandler('del')">DEL</button>
+                <button onclick="buttonHandler('dot')">.</button>
+                <button onclick="buttonHandler('div')">/</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        function buttonHandler(buttonName) {
+
+            if (buttonName == "one") {
+                document.getElementById("inputValue").value += 1;
+            }
+            if (buttonName == "two") {
+                document.getElementById("inputValue").value += 2;
+            }
+            if (buttonName == "three") {
+                document.getElementById("inputValue").value += 3;
+            }
+            if (buttonName == "four") {
+                document.getElementById("inputValue").value += 4;
+            }
+            if (buttonName == "five") {
+                document.getElementById("inputValue").value += 5;
+            }
+            if (buttonName == "six") {
+                document.getElementById("inputValue").value += 6;
+            }
+            if (buttonName == "seven") {
+                document.getElementById("inputValue").value += 7;
+            }
+            if (buttonName == "eight") {
+                document.getElementById("inputValue").value += 8;
+            }
+            if (buttonName == "nine") {
+                document.getElementById("inputValue").value += 9;
+            }
+            if (buttonName == "zero") {
+                document.getElementById("inputValue").value += 0;
+            }
+
+            if (buttonName == "backspace") {
+                const backButton = document.getElementById("inputValue").value;
+                let backSpace = backButton.slice(0, backButton.length - 1);
+                document.getElementById("inputValue").value = backSpace;
+            }
+            if (buttonName == "del") {
+                const delButton = "";
+                document.getElementById("inputValue").value = delButton;
+            }
+            if (buttonName == "dot") {
+                const dotButton = ".";
+                document.getElementById("inputValue").value += dotButton;
+            }
+            if (buttonName == "add") {
+                const addButton = "+";
+                document.getElementById("inputValue").value += addButton;
+            }
+            if (buttonName == "sub") {
+                const subButton = "-";
+                document.getElementById("inputValue").value += subButton;
+            }
+            if (buttonName == "multiply") {
+                const multiplyButton = "*";
+                document.getElementById("inputValue").value += multiplyButton;
+            }
+            if (buttonName == "div") {
+                const divButton = "/";
+                document.getElementById("inputValue").value += divButton;
+            }
+            if (buttonName == "equal") {
+                const result = document.getElementById("inputValue").value;
+                const mainResult = eval(result);
+                document.getElementById("inputValue").value = mainResult;
+            }
+
+        };
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
